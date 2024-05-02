@@ -1,4 +1,4 @@
-<h1>Project Webcup 2024</h1>h1>
+<h1>Project Webcup 2024</h1>
 <h2>Features</h2>
 <h3>Tech Stack</h3>
 
