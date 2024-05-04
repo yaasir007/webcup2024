@@ -1,0 +1,35 @@
+.about-section {
+  background-image: url('https://res.cloudinary.com/dqjdq06qv/image/upload/v1714832696/cooking_scroll_d2vjs3.webp'); /* Add your scroll background image path here */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.about-section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.about-sketches {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.about-sketches img {
+  max-width: 100%;
+}
+
+.mummy-chef {
+  margin-right: 20px;
+}
+
+.zombie-chef {
+  margin-left: 20px;
+}
