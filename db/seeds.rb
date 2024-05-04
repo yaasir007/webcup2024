@@ -39,14 +39,14 @@ Product.create!(title: "Ghoul's Gizzards", description: 'Spicy and tangy, these 
 
 # Seeds for Cryptic Concoctions
 Product.create!(title: 'Bloody Mary’s Revenge', description: "A cocktail so red and thick, you'll think it's right out of a transfusion bag", price: 10, category: 'Cryptic Concoctions', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850888/Monster%20Munchies/Menu/Bloody_Mary_s_Revenge_kpcier.webp')
-Product.create!(title: "Witch's Brew", description: 'A mystical mix of dark human nuts and spirits, served smoking with dry ice for that otherworldly effect', price: 10, category: 'Cryptic Concoctions', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850889/Monster%20Munchies/Menu/Witch_s_Brew_us05cf.webp')
+Product.create!(title: "Witch's Brew", description: 'A mix of dark human nut spirits, served smoking with dry ice for that otherworldly effect', price: 10, category: 'Cryptic Concoctions', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850889/Monster%20Munchies/Menu/Witch_s_Brew_us05cf.webp')
 
 # Seeds for Monstrous Mains
 Product.create!(title: 'Arm and Hammer Steak', description: 'Juicy arm cuts, tenderized with our graveyard hammer', price: 15, category: 'Monstrous Mains', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850889/Monster%20Munchies/Menu/Arm_and_Hammer_Steak_tysn4u.webp')
 Product.create!(title: "Coffin Sandwiches", description: "Packed with thinly sliced mortician's special meats", price: 10, category: 'Monstrous Mains', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850888/Monster%20Munchies/Menu/Coffin_Sandwiches_boajhp.webp')
 Product.create!(title: 'Skeleton Skewers', description: 'Marinated pieces of meat grilled to perfection on bone-shaped skewers', price: 25, category: 'Monstrous Mains', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850890/Monster%20Munchies/Menu/Skeleton_Skewers_ddtxht.webp')
 Product.create!(title: "Pharaoh’s Fingers Falafel", description: 'Crispy and golden, shaped in homage to the pharaohs’ eternal grasp', price: 30, category: 'Monstrous Mains', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850898/Monster%20Munchies/Menu/Pharaoh_s_Fingers_Falafel_pxfflp.webp')
-Product.create!(title: 'Sarcophagus Stew', description: 'A salad made from the freshest eyeballs.', price: 20, category: 'Monstrous Mains', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850899/Monster%20Munchies/Menu/Sarcophagus_Stew_fq7mw6.webp')
+Product.create!(title: 'Sarcophagus Stew', description: "A hearty blend featuring 'mummified' meat preserved in our chef's secret spices.", price: 20, category: 'Monstrous Mains', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850899/Monster%20Munchies/Menu/Sarcophagus_Stew_fq7mw6.webp')
 Product.create!(title: 'Curse of the Curry', description: 'A golden, spicy curry served in a hollowed-out bread sarcophagus.', price: 20, category: 'Monstrous Mains', image_url:'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850891/Monster%20Munchies/Menu/Curse_of_the_Curry_h45fgy.webp' )
 
 # Seeds for Zombie Zest
@@ -63,7 +63,7 @@ Product.create!(title: 'Ghostly Gelato', description: 'A chilling blend of vanil
 
 # Seeds for Ghastly Goodies
 Product.create!(title: 'Plasma Potion', description: 'A plasma-like potion that rejuvenates any tired zombie.', price: 8, category: 'Ghastly Goodies', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850898/Monster%20Munchies/Menu/Plasma_Potion_t0ekjg.webp')
-Product.create!(title: "Vampire's Vengeance", description: 'A rich, red wine cocktail with a splash of pomegranate juice, garnished with a \'blood\'-soaked cherry.', price: 12, category: 'Ghastly Goodies', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850888/Monster%20Munchies/Menu/Vampire_s_Vengeance_t9ky71.webp')
+Product.create!(title: "Vampire's Vengeance", description: 'A rich, red wine cocktail with a splash of blood, garnished with a \'plasma\'-soaked cherry.', price: 12, category: 'Ghastly Goodies', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850888/Monster%20Munchies/Menu/Vampire_s_Vengeance_t9ky71.webp')
 Product.create!(title: 'Bone Broth Brew', description: 'Simmered slow and steady to capture every last bit of marrow.', price: 10, category: 'Ghastly Good', image_url:'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714850890/Monster%20Munchies/Menu/Bone_Broth_Brew_pbowsz.webp')
 
 

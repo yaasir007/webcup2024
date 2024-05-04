@@ -108,3 +108,75 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
+/* CSS for the Product Details Page */
+.product-detail-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+}
+
+.product-image-container {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.product-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.product-title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-size: 1.5em;
+  color: #28a745; /* A green color to emphasize the price */
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+

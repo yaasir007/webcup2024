@@ -1,16 +1,15 @@
 <% @product = params[:id].present? ? Product.find(params[:id]) : Product.find(params[:basket_item][:product_id]) %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h1><%= @product.title %></h1>
-      <p><%= @product.description %></p>
-      <p><strong>Price:</strong> <%= number_to_currency(@product.price) %></p>
-      <%= simple_form_for @basket_item, url: basket_items_path do |f| %>
-        <%= f.hidden_field :product_id, value: @product.id %>
-        <%= f.input :quantity, input_html: { value: 1 } %>
-        <%= f.submit "Add to basket", class: "btn btn-primary" %>
-      <% end %>
+<section class="product-detail-section">
+    <div class="product-detail-container">
+        <div class="product-image-container">
+            <img src="<%= @product.image_url %>" alt="<%= @product.title %>" class="product-image">
+        </div>
+        <div class="product-info">
+            <h1 class="product-title"><%= @product.title %></h1>
+            <p class="product-description"><%= @product.description %></p>
+            <h2 class="product-price">Price: <%= number_to_currency(@product.price) %></h2>
+            <a href="<%= products_path %>" class="btn btn-secondary">Back to Products</a>
+        </div>
     </div>
-  </div>
-</div>
+</section>
