@@ -1,4 +1,5 @@
 class Basket < ApplicationRecord
-  belongs_to :product
-  belongs_to :order
+  has_many :basket_items, dependent: :destroy
+  has_many :products, through: :basket_items
+  belongs_to :user
 end
