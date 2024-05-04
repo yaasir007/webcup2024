@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
       @basket
     end
   end
+
+  def authorize_user
+    redirect_to root_path, notice: 'Only humans can view this page, we are watching you!' unless current_user.admin?
+  end
+
+  def authorized?
+    current_user.admin?
+  end
 end

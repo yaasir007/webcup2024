@@ -1,9 +1,9 @@
 <div class="product-card">
-    <%= image_tag("https://res.cloudinary.com/dqjdq06qv/image/upload/v1714834608/Sarcophagus_Stew_zpnspq.webp", alt: "Zombie Brain Stew", class: "product-image") %>
+    <%= image_tag(product.image_url, alt: product.title, class: "product-image") %>
     <div class="product-info">
-        <h2 class="dripping-text">Zombie Brain Stew</h2>
-        <h2>Zombie Brain Stew</h2>
-        <p>A delightful mix of brains and spices, simmered to undead perfection. Sure to bring the dead to your dinner table!</p>
-        <p class="price">$8.99</p>
+        <h2 class="dripping-text"><%= product.title %></h2>
+        <h2><%= product.title %></h2>
+        <p><%= product.description %></p>
+        <p class="price">$<%= '%.2f' % product.price %></p>
     </div>
 </div>

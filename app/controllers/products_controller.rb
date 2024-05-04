@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params_product)
     if @product.save
-      redirect_to root_path, notice: "Product saved successfully"
+      redirect_to my_products_path, notice: "Product saved successfully"
     else
       render :new, notice: "Something went wrong, try again!", status: :unprocessable_entity
     end
@@ -43,7 +43,8 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
-  def params_product
-    params.require(:product).permit(:title, :description, :price, :category)
-  end
+def params_product
+  params.require(:product).permit(:title, :description, :price, :category, :image_url)
+end
+
 end
