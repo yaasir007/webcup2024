@@ -15,3 +15,8 @@ $subheadings-font: "IM Fell English SC", "serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+a {
+  font-family: $body-font;
+  text-decoration: none !important;
+}

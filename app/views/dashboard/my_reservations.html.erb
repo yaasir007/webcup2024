@@ -1,20 +1,9 @@
-<h1>Reservations</h1>
+<%= render 'layouts/top_dashboard', page_title: 'My Reservations' %>
 
-<div class="container">
-  <% @reservations.each do |reservation| %>
-    <div>
-      <p>Table: <%= reservation.table.name %></p>
-      <p>Seats: <%= reservation.seats %></p>
-      <p>Start time: <%= reservation.start_time %></p>
-    </div>
-  <% end %>
-</div>
+  <h1>Reservations</h1>
 
-
-<% unless @past_reservations.empty? %>
   <div class="container">
-    <h1>Past Reservations</h1>
-    <% @past_reservations.each do |reservation| %>
+    <% @reservations.each do |reservation| %>
       <div>
         <p>Table: <%= reservation.table.name %></p>
         <p>Seats: <%= reservation.seats %></p>
@@ -22,4 +11,18 @@
       </div>
     <% end %>
   </div>
-<% end %>
+
+
+  <% unless @past_reservations.empty? %>
+    <div class="container">
+      <h1>Past Reservations</h1>
+      <% @past_reservations.each do |reservation| %>
+        <div>
+          <p>Table: <%= reservation.table.name %></p>
+          <p>Seats: <%= reservation.seats %></p>
+          <p>Start time: <%= reservation.start_time %></p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+<%= render 'layouts/btm_dashboard' %>

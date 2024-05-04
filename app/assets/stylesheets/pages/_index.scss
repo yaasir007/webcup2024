@@ -11,6 +11,13 @@
   --bloodRed: #8A0303;
   --bgColorBlack: #000000;
   --bgColorWhite:#F8F8FF;
+  --green: #8DBF10;
+  --purple: #6348A5;
+  --yellow: #F8CF3A;
+  --brown: #B55915;
+  --border-radius-mid: 10px;
+  --header-height: 4rem;
+  --border-radius-sm: 5px;
 }
 
 body {
@@ -38,3 +45,4 @@ body {
 }
 
 @import "home";
+@import "dashboard";

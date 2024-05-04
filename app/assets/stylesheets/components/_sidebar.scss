@@ -1,0 +1,113 @@
+.dash-full {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr); /* Assuming a 12-column grid, adjust as needed */
+  height: 100%;
+  background-color: #6348a5;;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sidebar-layout {
+  grid-column: span 2; /* This div will span 10 columns */
+  background-color: #6348a5;;
+}
+
+.content-area-layout {
+  grid-column: span 12; /* This div will span 10 columns */
+  background-color: white;
+  border-radius: var(--border-radius-mid);
+  margin: 10px;
+}
+
+.container_dashboard {
+  padding-top: 2rem;
+}
+
+.header-dashboard {
+  padding: 23px 40px 0px 40px;
+  display: flex;
+  justify-content: space-between;
+
+  color: #8EBD16;
+}
+
+@media (max-width: 768px) {
+  .container_dashboard {
+    margin: var(--header-height) 0 0 0;
+    padding: 2rem 0rem 0 0rem;
+  }
+}
+
+.nav__container {
+  // height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  overflow: auto;
+  scrollbar-width: none; /* For mozilla */
+}
+
+.side-header {
+  padding: 15px 20px 15px 25px;
+  color: #8EBD16;
+
+  h2 {
+    margin: 0 15px;
+    padding-top: 15px;
+  }
+}
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link {
+  border-radius: var(--border-radius-sm);
+  color: gray;
+  padding: 15px;
+  transition: all 0.15s ease-in-out;
+}
+
+.nav__link:hover {
+  transform: scale(1.1);
+}
+
+.active-link {
+  background: var(--yellow);
+  color: var(--brown);
+}
+
+.profile-card {
+  background: lightgray;
+  border-radius: var(--border-radius-mid);
+  padding: 10px 15px;
+  margin: auto 0 10px 10px;
+  position: sticky;
+  bottom: 10px;
+
+  .profile-details {
+    font-size: 0.8rem;
+    color: black;
+  }
+
+  hr {
+    margin: 15px 0;
+  }
+}
+
+.hr-fix{
+  margin: 0 30px;
+  border-bottom: 1px solid #848484; /* you may match this border with the right border of the <div>*/
+}
+
+.nav__name {
+  text-decoration: none;
+}
