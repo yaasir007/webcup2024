@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params_product)
     if @product.save
-      redirect_to root_path, notice: "Product saved successfully"
+      redirect_to my_products_path, notice: "Product saved successfully"
     else
       render :new, notice: "Something went wrong, try again!", status: :unprocessable_entity
     end

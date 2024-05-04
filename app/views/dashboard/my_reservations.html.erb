@@ -1,0 +1,25 @@
+<h1>Reservations</h1>
+
+<div class="container">
+  <% @reservations.each do |reservation| %>
+    <div>
+      <p>Table: <%= reservation.table.name %></p>
+      <p>Seats: <%= reservation.seats %></p>
+      <p>Start time: <%= reservation.start_time %></p>
+    </div>
+  <% end %>
+</div>
+
+
+<% unless @past_reservations.empty? %>
+  <div class="container">
+    <h1>Past Reservations</h1>
+    <% @past_reservations.each do |reservation| %>
+      <div>
+        <p>Table: <%= reservation.table.name %></p>
+        <p>Seats: <%= reservation.seats %></p>
+        <p>Start time: <%= reservation.start_time %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
