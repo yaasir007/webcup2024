@@ -56,6 +56,30 @@
   margin: auto;
 }
 
+.cuisine-content {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.products-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.products-cards {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
 .product-cuisine .product-cuisine-image {
   flex: 1 1 40%;
   max-width: 40%;
@@ -67,7 +91,7 @@
 
 .product-cuisine .product-text-content {
   flex: 1 1 55%; /* Takes up 55% of the container */
-  max-width: 55%;
+  max-width: 70%;
 }
 
 .product-cuisine h2 {
