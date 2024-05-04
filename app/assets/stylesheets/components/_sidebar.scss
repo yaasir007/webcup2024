@@ -9,13 +9,13 @@
   display: grid;
   grid-template-columns: repeat(14, 1fr); /* Assuming a 12-column grid, adjust as needed */
   height: 100%;
-  background-color: var(--secondary);
+  background-color: #6348a5;;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .sidebar-layout {
   grid-column: span 2; /* This div will span 10 columns */
-  background-color: var(--secondary);
+  background-color: #6348a5;;
 }
 
 .content-area-layout {
@@ -33,6 +33,8 @@
   padding: 23px 40px 0px 40px;
   display: flex;
   justify-content: space-between;
+
+  color: #8EBD16;
 }
 
 @media (max-width: 768px) {
@@ -52,7 +54,13 @@
 }
 
 .side-header {
-  padding: 25px 20px 0px 25px;
+  padding: 15px 20px 15px 25px;
+  color: #8EBD16;
+
+  h2 {
+    margin: 0 15px;
+    padding-top: 15px;
+  }
 }
 
 .sidebar {
@@ -73,8 +81,8 @@
 }
 
 .active-link {
-  background: #6348a5;
-  color: white;
+  background: var(--yellow);
+  color: var(--brown);
 }
 
 .profile-card {

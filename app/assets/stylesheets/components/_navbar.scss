@@ -43,4 +43,8 @@ nav {
 .navbar-brand {
   transform: scale(1.25);
   border-radius: var(--border-radius-sm);
+
+  h2 {
+    color: #8EBD16;
+  }
 }
