@@ -39,6 +39,14 @@
   text-align: left;
 }
 
+.product-cuisine, .product-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .product-cuisine .product-cuisine-container {
   display: flex;
   flex-wrap: wrap;
@@ -71,4 +79,8 @@
 .product-cuisine p {
   font-size: 18px;
   line-height: 1.6;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }

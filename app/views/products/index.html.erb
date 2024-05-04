@@ -3,18 +3,28 @@
     <h1>Dine with the Undead</h1>
 </section>
 
-<!-- Product Cards -->
-<% @products.each do |product| %>
-  <%= render 'product_card', product: product %>
-<% end %>
+<!-- Product Cards Section -->
+<div class="custom-container mt-4">
+    <div class="row">
+        <% @products.each do |product| %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <%= render 'product_card', product: product %>
+            </div>
+        <% end %>
+    </div>
+</div>
 
 <section class="product-cuisine">
-    <div class="product-cuisine-container">
-        <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714843525/product-cuisine-about-2_sqesyo.webp" alt="Spooky culinary delights" class="product-cuisine-image">
-        <div class="product-text-content">
-          <h2>About Our Eerie Eats</h2>
-          <p>Step into a world where each dish tells a tale of mystery and horror. At Monster Munchies, we specialize in creating culinary experiences that are not only mouth-watering but also mind-bending. From the depths of the undead kitchens, our recipes are conjured to thrill and chill.</p>
-          <p>Our signature dishes, like the 'Sarcophagus Stew' and 'Mummy Wraps', use ingredients sourced from the darkest corners of the earth, seasoned with ancient herbs whispered in folklore. Dare to dine with us, and savor the taste of the unknown!</p>
+    <div class="custom-container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714843525/product-cuisine-about-2_sqesyo.webp" alt="Spooky culinary delights" class="img-fluid mb-4">
+                <div class="product-text-content">
+                    <h2>About Our Eerie Eats</h2>
+                    <p>Step into a world where each dish tells a tale of mystery and horror. At Monster Munchies, we specialize in creating culinary experiences that are not only mouth-watering but also mind-bending. From the depths of the undead kitchens, our recipes are conjured to thrill and chill.</p>
+                    <p>Our signature dishes, like the 'Sarcophagus Stew' and 'Mummy Wraps', use ingredients sourced from the darkest corners of the earth, seasoned with ancient herbs whispered in folklore. Dare to dine with us, and savor the taste of the unknown!</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
