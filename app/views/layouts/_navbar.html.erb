@@ -1,12 +1,26 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-      <%= cl_image_tag("https://res.cloudinary.com/dqjdq06qv/image/upload/v1714825954/Monster-Munchies-logo_gjeqpt.webp", alt: "Monster Munchies", width: 50, height: 50, crop: :fill) %>
+    <a class="navbar-brand" href="#">
+      <%= cl_image_tag("https://res.cloudinary.com/dqjdq06qv/image/upload/v1714825954/Monster-Munchies-logo_gjeqpt.webp", alt: "Your Logo", width: 70, height: 70, crop: :fill) %>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= products_path %>">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
       <% if user_signed_in? %>
         <div class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
@@ -20,13 +34,7 @@
           </li>
         </div>
       <% else %>
-        <div class="navbar-nav ml-auto navbar-items-outside">
-          <li class="nav-item">
-            <%= link_to "Products", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Reservations", "#", class: "nav-link" %>
-          </li>
+        <div class="navbar-nav ml-auto">
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
