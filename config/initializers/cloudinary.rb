@@ -1,7 +1,7 @@
 Cloudinary.config do |config|
-  config.cloud_name = 'dqjdq06qv'
-  config.api_key = '185517885558468'
-  config.api_secret = 'q3L_Io4ebwjl7gwDe_EHpee0GfY'
-  config.secure = true # Enforces HTTPS
-  config.cdn_subdomain = true # Use subdomain for assets
+  config.cloud_name = ENV['CLOUDINARY_CLOUD_NAME']
+  config.api_key = ENV['CLOUDINARY_API_KEY']
+  config.api_secret = ENV['CLOUDINARY_API_SECRET']
+  config.secure = true
+  config.cdn_subdomain = true
 end
