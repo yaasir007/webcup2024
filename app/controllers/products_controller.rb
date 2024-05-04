@@ -1,12 +1,14 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :set_product, only: %i[show edit update destroy]
+  before_action :set_product, only: %i[edit update destroy]
 
   def index
     @products = Product.all
   end
 
-  def show; end
+  def show
+    @basket_item = BasketItem.new
+  end
 
   def new
     @product = Product.new

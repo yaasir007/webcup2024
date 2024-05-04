@@ -1,6 +1,6 @@
 class BasketsController < ApplicationController
 
   def show
-    @basket = current_user.basket
+    @items = @basket.basket_items.includes(:product)
   end
 end
