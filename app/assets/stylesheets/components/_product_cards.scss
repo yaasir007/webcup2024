@@ -1,0 +1,87 @@
+.product-card {
+  width: 300px;
+  height: 415px;
+  border: 8px solid #CFB53B;
+  background-color: #000000;
+  color: #F8F8FF;
+  font-family: 'Merriweather', serif;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(139, 0, 0, 0.8);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.product-info h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #39FF14;
+  font-family: 'Creepster', cursive;
+  position: relative;
+}
+
+.product-info h2::after,
+.product-info h2::before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #39FF14, transparent);
+  position: absolute;
+  left: 10%;
+}
+
+.product-info h2::after {
+  top: 100%;
+  border-top: 1px dotted #39FF14;
+}
+
+.product-info h2::before {
+  bottom: 100%;
+  border-bottom: 1px dotted #39FF14;
+}
+
+.product-info p {
+  font-size: 16px;
+  color: #F8F8FF;
+}
+
+.price {
+  font-size: 18px;
+  color: #8A0303;
+  font-weight: bold;
+  position: relative;
+  padding-top: 10px;
+}
+
+.price::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #8A0303, transparent);
+  margin: 0 auto 10px;
+  border-top: 1px dotted #8A0303;
+}
+
+.product-card:hover img {
+  filter: brightness(110%);
+}
+
+.product-card:hover .product-info h2 {
+  text-shadow: 2px 2px 10px #39FF14;
+}

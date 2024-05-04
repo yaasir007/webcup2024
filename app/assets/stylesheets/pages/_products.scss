@@ -1,0 +1,74 @@
+.product-banner {
+  position: relative;
+  width: 100%;
+  height: 40vh; // Adjust height as needed
+  color: #F8F8FF; // Text color for contrast
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.product-banner .product-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; // Puts the image behind the text
+  filter: brightness(100%);
+}
+
+.product-banner h1 {
+  font-family: 'Creepster', cursive; // Ensure you've included this font in your assets or via a CDN
+  font-size: 48px; // Large text size for impact
+  color: #39FF14; // Muted gold color for a thematic feel
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); // Text shadow for better legibility
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); // Semi-transparent background for the text for better readability
+  border-radius: 10px;
+}
+
+.product-cuisine {
+  background-color: #000000; /* Midnight Black for a dark theme */
+  color: #F8F8FF; /* Ghostly White for text */
+  padding: 40px 20px;
+  font-family: 'Merriweather', serif;
+  text-align: left;
+}
+
+.product-cuisine .product-cuisine-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Centers items vertically */
+  justify-content: space-between; /* Adds space between the image and text */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.product-cuisine .product-cuisine-image {
+  flex: 1 1 40%;
+  max-width: 40%;
+  height: auto;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+.product-cuisine .product-text-content {
+  flex: 1 1 55%; /* Takes up 55% of the container */
+  max-width: 55%;
+}
+
+.product-cuisine h2 {
+  color: #39FF14;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.product-cuisine p {
+  font-size: 18px;
+  line-height: 1.6;
+}
