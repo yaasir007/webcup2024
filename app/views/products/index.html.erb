@@ -2,14 +2,12 @@
     <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714840470/undead_having_fun_at_the_bar_kfkmtj.webp" alt="Dining with the Undead" class="product-banner-img">
     <h1>Dine with the Undead</h1>
 </section>
-<div class="product-card">
-    <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714834608/Sarcophagus_Stew_zpnspq.webp" alt="Zombie Brain Stew" class="product-image">
-    <div class="product-info">
-        <h2>Zombie Brain Stew</h2>
-        <p>A delightful mix of brains and spices, simmered to undead perfection. Sure to bring the dead to your dinner table!</p>
-        <p class="price">$8.99</p>
-    </div>
-</div>
+
+<!-- Product Cards -->
+<% @products.each do |product| %>
+  <%= render 'product_card', product: product %>
+<% end %>
+
 <section class="product-cuisine">
     <div class="product-cuisine-container">
         <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714843525/product-cuisine-about-2_sqesyo.webp" alt="Spooky culinary delights" class="product-cuisine-image">
