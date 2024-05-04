@@ -22,6 +22,22 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_04_091908) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "total"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.date "date"
+    t.integer "seats"
+    t.integer "user_id", null: false
+    t.integer "table_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["table_id"], name: "index_reservations_on_table_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "tables", force: :cascade do |t|
+    t.string "name"
+    t.integer "number_of_seats"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,4 +65,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_04_091908) do
 
   add_foreign_key "baskets", "orders"
   add_foreign_key "baskets", "products"
+  add_foreign_key "reservations", "tables"
+  add_foreign_key "reservations", "users"
 end
