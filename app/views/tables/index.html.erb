@@ -1,0 +1,19 @@
+<div class="container">
+  <%= simple_form_for @reservation do |f| %>
+    <%= f.input :table_id, collection: @tables,
+                as: :radio_buttons,
+                collection_wrapper_tag: 'div',
+                collection_wrapper_class: 'category-wrapper',
+                item_wrapper_class: 'category-item',
+                input_html: {
+                  class: 'filter-button category-selector',
+                  data: {
+                      refresh_list_target: 'filterInput',
+                      action: "change->refresh-list#filter"
+                  }
+                } %>
+    <%= f.input :seats, label: "Number of Starving Monsters (Hoard capacity: 8)" %>
+    <%= f.input :start_time %>
+    <%= f.submit %>
+  <% end %>
+</div>
