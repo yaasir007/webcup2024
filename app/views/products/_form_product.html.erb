@@ -1,7 +1,9 @@
-<%= simple_form_for product do |f| %>
+<!-- Using simple_form within your views -->
+<%= simple_form_for @product, html: { class: 'form-product' } do |f| %>
   <%= f.input :title %>
   <%= f.input :price %>
   <%= f.input :description %>
   <%= f.input :category %>
-  <%= f.submit %>
+  <%= f.input :image_url, as: :string, input_html: { value: @product.image_url }, label: 'Image URL' %>
+  <%= f.button :submit, 'Create Product', class:'btn btn-primary' %>
 <% end %>
