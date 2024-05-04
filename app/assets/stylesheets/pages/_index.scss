@@ -1,2 +1,42 @@
 // Import page-specific CSS files here.
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --logoColor: #271232;
+  --primary: #4B0082;
+  --secondary: #CFB53B;
+  --bloodRed: #8A0303;
+  --bgColorBlack: #000000;
+  --bgColorWhite:#F8F8FF;
+}
+
+body {
+  background-color: var(--bgColorBlack);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.img-res {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: bottom;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 @import "home";
