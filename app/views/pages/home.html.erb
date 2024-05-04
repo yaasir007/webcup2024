@@ -1,47 +1,35 @@
-<section class="hero-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h1>Monster Munchies</h1>
-        <p>Feast for the Eternal</p>
-        <div class="cta-buttons">
-          <%= link_to "Enter if You Dare", root_path, class: "btn btn-primary btn-lg" %>
-          <%= link_to "Unearth Our Menu", root_path, class: "btn btn-warning-light btn-lg" %>
-        </div>
-      </div>
+<div class="hero-container">
+  <div class="hero-wrapper"></div>
+  <div class="centered">
+    <div class="hero-content">
+      <h1 class="hero-title">Monster Munchies</h1>
+      <h3 class="hero-subtitle">Feast for the Eternal</h3>
+    </div>
+
+    <div class="hero-buttons">
+      <%= link_to "Enter if You Dare", "#", class: "buttonOne" %>
+      <%= link_to "Unearth Our Menu", "#", class: "buttonTwo" %>
     </div>
   </div>
-</section>
+</div>
 
-<section class="about-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="about-content">
-          <h2>About Us</h2>
-          <p>
-            Once upon a time, in a crypt far, far away, a mummy chef and a zombie chef stumbled upon each other in the dead of night. They realized they shared a passion for cooking, and thus, Monster Munchies was born.
-          </p>
-          <p>
-            Despite their unconventional partnership, they united their culinary skills to create a dining experience like no other, blending ancient recipes with modern human flavors in a fusion of undead delights.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="about-sketches">
-          <%= cl_image_tag("https://res.cloudinary.com/dqjdq06qv/image/upload/v1714832699/mummy_gordon_ramsay_tmjvsp.webp", alt: "Mummy Chef", class: "mummy-chef") %>
+<div class="products-display-container">
+  <div class="product-display-wrapper">
 
-          <%= cl_image_tag("https://res.cloudinary.com/dqjdq06qv/image/upload/v1714832687/zombie_anthony_bourdain_uoqh7v.webp", alt: "Zombie Chef", class:"zombie-chef") %>
-        </div>
+    <div class="product-display-content">
+      <div class="product-display-name">Spooky Atmosphere</div>
+      <div class="product-display-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio labore a totam voluptate mollitia eveniet nobis, doloribus dolor officiis cum quibusdam, quam consequatur, ea facilis omnis ullam atque!
       </div>
     </div>
+
+    <div class="product-display-images">
+      <%# <img src="" alt="" class="img-res">
+      <img src="" alt="" class="img-res">
+      <img src="" alt="" class="img-res"> %>
+      <div class="product-img"></div>
+      <div class="product-img"></div>
+      <div class="product-img"></div>
+    </div>
   </div>
-</section>
-
-
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Hello there, working fine</p>
-<p>Gato ou Gato?</p>
-
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+</div>
