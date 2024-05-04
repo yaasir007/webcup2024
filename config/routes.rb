@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :tables, only: [:index]
   resources :reservations, only: [:index, :create, :destroy]
   resources :orders, only: [:show, :create, :index]
+  resources :basket_items, only: [:create, :destroy]
 end
