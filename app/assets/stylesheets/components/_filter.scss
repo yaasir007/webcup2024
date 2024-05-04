@@ -1,0 +1,60 @@
+.category-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.category-item {
+  flex: 0 0 30%;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.category-selector:checked + label {
+  color: white !important;
+}
+
+
+#filter_filter_healthcare:checked + label {
+  background-color: $orange;
+  border-color: #063660;
+}
+
+#filter_filter_services:checked + label {
+  background-color: $orange;
+  border-color: #F7B651;
+}
+
+#filter_filter_trading:checked + label {
+  background-color: $orange;
+  border-color: #F89A1C;
+}
+
+#filter_filter_manufacturing:checked + label {
+  background-color: $orange;
+  border-color: #5A8F8D;
+}
+
+#filter_filter_engineering:checked + label {
+  background-color: $orange;
+  border-color: #DD1935;
+}
+
+#filter_filter_all:checked + label {
+  background-color: $blue;
+}
