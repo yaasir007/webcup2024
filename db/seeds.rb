@@ -23,6 +23,9 @@ puts "Seeding the database..."
 
 # Create a user
 User.create!(email: 'shawnoftheundead@deadmail.com', password: 'password')
+User.create!(email: 'admin@gmail.com', password: 'password', admin: true)
+User.create!(email: 'user@gmail.com', password: 'password')
+
 
 Table.create!(name: 'Ghoulish Grub')
 Table.create!(name: 'Spooky Snack')

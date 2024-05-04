@@ -12,7 +12,13 @@ Rails.application.routes.draw do
   resources :products
   resources :baskets, only: [:show]
   resources :tables, only: [:index]
-  resources :reservations, only: [:index, :create, :destroy]
+  resources :reservations, only: [:create, :destroy]
   resources :orders, only: [:show, :create, :index]
   resources :basket_items, only: [:create, :destroy]
+
+  get 'dashboard/my_reservations', to: 'dashboard#my_reservations', as: 'my_reservations'
+  get 'dashboard/my_orders', to: 'dashboard#my_orders', as: 'my_orders'
+  get 'dashboard/my_products', to: 'dashboard#my_products', as: 'my_products'
+  get 'dashboard/my_tables', to: 'dashboard#my_tables', as: 'my_tables'
+
 end
