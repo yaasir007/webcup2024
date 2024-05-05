@@ -1,14 +1,17 @@
 <%= render 'layouts/top_dashboard', page_title: 'My Reservations' %>
-
-  <h1>Reservations</h1>
+  <div class="center-items mb-5">
+    <h1>Reservations</h1>
+  </div>
 
   <div class="container">
     <div class="reservation-items" style="display:flex; gap: 1rem;">
       <% @reservations.each do |reservation| %>
-        <div style="border: 1px solid purple; padding: 1rem;">
-          <p>Table: <%= reservation.table.name %></p>
-          <p>Seats: <%= reservation.seats %></p>
-          <p>Start time: <%= reservation.start_time %></p>
+        <div class="card-order" style="width: 20%;">
+          <div class="d-flex justify-content-between">
+            <p><%= reservation.table.name %></p>
+            <p><%= reservation.seats %> <i class="fa-solid fa-skull"></i></p>
+          </div>
+          <p>at: <%= reservation.start_time.strftime('%r') %></p>
         </div>
       <% end %>
     </div>
@@ -20,7 +23,7 @@
       <h1>Past Reservations</h1>
       <div class="reservation-items" style="display:flex; gap: 1rem;">
         <% @past_reservations.each do |reservation| %>
-        <div style="border: 1px solid purple; padding: 1rem; border-radius: 5px;">
+        <div class="d-flex justify-content-between">
           <p>Table: <%= reservation.table.name %></p>
           <p>Seats: <%= reservation.seats %></p>
           <p>Start time: <%= reservation.start_time %></p>

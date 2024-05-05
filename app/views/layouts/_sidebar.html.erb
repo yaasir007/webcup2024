@@ -9,24 +9,31 @@
     <hr class="hr-fix" />
 
     <div class="nav__container gap-2" data-controller="active-link">
-      <a href=<%= my_products_path %> class="nav__link mt-3" data-active-link-target="link">
-        <i class="fa-solid fa-biohazard"></i>
-        <span class="nav__name">My Products</span>
-      </a>
+      <% if current_user.admin? %>
+        <a href=<%= my_products_path %> class="nav__link mt-3" data-active-link-target="link">
+          <i class="fa-solid fa-biohazard"></i>
+          <span class="nav__name">My Products</span>
+        </a>
 
-      <a href=<%= my_reservations_path %> class="nav__link" data-active-link-target="link">
-        <i class="fa-solid fa-table-list nav__icon"></i>
-        <span class="nav__name">My Reservations</span>
-      </a>
+        <a href=<%= my_reservations_path %> class="nav__link" data-active-link-target="link">
+          <i class="fa-solid fa-table-list nav__icon"></i>
+          <span class="nav__name">My Reservations</span>
+        </a>
 
-      <a href=<%= my_orders_path %> class="nav__link" data-active-link-target="link">
-        <i class="fa-solid fa-address-card"></i>
-        <span class="nav__name">My Orders</span>
-      </a>
+        <a href=<%= my_orders_path %> class="nav__link" data-active-link-target="link">
+          <i class="fa-solid fa-address-card"></i>
+          <span class="nav__name">My Orders</span>
+        </a>
+      <% else %>
+        <a href=<%= my_reservations_path %> class="nav__link" data-active-link-target="link">
+          <i class="fa-solid fa-table-list nav__icon"></i>
+          <span class="nav__name">My Reservations</span>
+        </a>
 
-      <a href=<%= my_tables_path %> class="nav__link" data-active-link-target="link">
-        <i class="fa-solid fa-utensils"></i>
-        <span class="nav__name">My Tables</span>
-      </a>
+        <a href=<%= my_orders_path %> class="nav__link" data-active-link-target="link">
+          <i class="fa-solid fa-address-card"></i>
+          <span class="nav__name">My Orders</span>
+        </a>
+      <% end %>
     </div>
   </div>
