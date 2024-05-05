@@ -8,6 +8,7 @@ class ProductsController < ApplicationController
 
   def show
     @basket_item = BasketItem.new
+    @product = Product.find(params[:id])
   end
 
   def new

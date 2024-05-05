@@ -1,14 +1,18 @@
-
-<div class="container">
-  <h1>Products</h1>
-  <% @products.each do |product| %>
-    <div>
-      <p>Name: <%= product.title %></p>
-      <p>Price: <%= product.price %></p>
+<%= render 'layouts/top_dashboard', page_title: 'My Products' %>
+  <div class="container">
+    <div class="center-items">
+      <h2>Add a new Dish</h2>
     </div>
-  <% end %>
-</div>
+    <%= render 'products/form_product', product: @product %>
+  </div>
 
-<div class="container">
-  <%= render 'products/form_product', product: @product %>
-</div>
+  <div class="container">
+    <div class="grid-2">
+      <% @products.each do |product| %>
+        <%= render 'product_card', product: product %>
+      <% end %>
+    </div>
+  </div>
+
+
+<%= render 'layouts/btm_dashboard' %>

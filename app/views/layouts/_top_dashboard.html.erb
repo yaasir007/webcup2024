@@ -1,0 +1,12 @@
+
+  <div class="dashboard-layout">
+    <div class="sidebar-layout">
+      <%= render 'layouts/sidebar' %>
+    </div>
+    <div class="content-area-layout">
+      <div class="header-dashboard">
+        <h2><%= page_title %></h2>
+        <p><i class="fa-solid fa-skull"></i> Hello there, <%= current_user.email %></p>
+      </div>
+      <hr class="hr-fix" />
+        <div class="container_dashboard">

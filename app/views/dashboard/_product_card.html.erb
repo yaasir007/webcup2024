@@ -1,0 +1,19 @@
+<%= link_to product_path(product) do %>
+  <div class="container_h">
+    <div class="card_h">
+      <div class="card-image">
+          <%= image_tag product.image_url %>
+        <div class="block-tag">
+          <p><span class="tag"><%= product.category %></span></p>
+        </div>
+      </div>
+      <div class="card-content">
+        <div class="title_h"><%= product.title %></div>
+        <div class="content_h"><%= product.description %></div>
+        <div class="info-footer">
+          <p>⭐️⭐️⭐️⭐️ <i>(<%= rand(1..200) %>)</i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
