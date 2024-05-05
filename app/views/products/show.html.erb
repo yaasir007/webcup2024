@@ -1,4 +1,8 @@
 <% @product = params[:id].present? ? Product.find(params[:id]) : Product.find(params[:basket_item][:product_id]) %>
+<section class="product-banner">
+    <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714840470/undead_having_fun_at_the_bar_kfkmtj.webp" alt="Dining with the Undead" class="product-banner-img">
+    <h1>Dine with the Undead</h1>
+</section>
 
 <section class="product-detail-section">
     <div class="product-detail-container">
@@ -10,6 +14,7 @@
             <p class="product-description"><%= @product.description %></p>
             <h2 class="product-price">Price: <%= number_to_currency(@product.price) %></h2>
             <a href="<%= products_path %>" class="btn btn-secondary">Back to Products</a>
+            <a href="<%= products_path %>" class="btn btn-primary">Add to Basket</a>
         </div>
     </div>
 </section>

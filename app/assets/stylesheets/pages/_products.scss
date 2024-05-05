@@ -31,37 +31,61 @@
   border-radius: 10px;
 }
 
-.product-cuisine {
-  background-color: #000000; /* Midnight Black for a dark theme */
-  color: #F8F8FF; /* Ghostly White for text */
-  padding: 40px 20px;
-  font-family: 'Merriweather', serif;
-  text-align: left;
-}
-
-.product-cuisine, .product-banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.product-cuisine .product-cuisine-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; /* Centers items vertically */
-  justify-content: space-between; /* Adds space between the image and text */
+.custom-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cuisine-content {
-  width: 90%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cuisine-image {
+  width: 50%;
+  flex: 1 1 40%; /* Flex grow, flex shrink, flex basis */
+  max-width: 40%;
+  margin-right: 20px;
+}
+
+.product-text-content {
+  flex: 1 1 60%; /* Flex grow, flex shrink, flex basis */
+  max-width: 60%;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .cuisine-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .cuisine-image,
+  .product-text-content {
+      max-width: 100%;
+      flex-basis: 100%;
+      margin-right: 0;
+  }
+
+  .product-text-content {
+      padding: 20px 0;
+  }
+}
+
+.product-text-content h2 {
+  margin-bottom: 20px;
+  color: var(--yellow);
+}
+
+.product-text-content p {
+  line-height: 1.6;
 }
 
 .products-container {
@@ -179,4 +203,3 @@
 .btn:hover {
   background-color: #0056b3;
 }
-
