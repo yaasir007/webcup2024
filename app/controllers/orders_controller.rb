@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
     @order.save
     @basket = Basket.create
     session[:basket_id] = @basket.id
-    redirect_to root_path, notice: 'Your delivery is on its way! 🚚'
+    redirect_to products_path, notice: 'Your delivery is on its way! 🚚'
   end
 
   private
