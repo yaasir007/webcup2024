@@ -32,13 +32,10 @@ class DashboardController < ApplicationController
   end
 
   def my_delivery_route
-    @orders = Order.where(delivered: false)
-    @coordinates = []
-    @orders.each do |order|
-      @coordinates << [
-        order.latitude,
-        order.longitude
-      ]
-    end
+    @order = Order.find(params[:id])
+    @coordinates = [{
+        lat: @order.latitude,
+        lng: @order.longitude
+      }]
   end
 end

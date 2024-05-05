@@ -3,9 +3,30 @@
     <div class="container center-items">
       <h2>Undelivered Orders</h2>
     </div>
-
     <div class="container">
+      <% @past_orders.each do |order| %>
+        <div class="order">
+          <p>Order Total: <%= number_to_currency(order.total) %></p>
+          <p>Order Date: <%= order.created_at.strftime('%d %b %Y') %></p>
+          <div class="center-items">
+            <%= link_to 'OPTIMIZE ROUTE', my_delivery_route_path(order), class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="container center-items">
       <h2>Delivered</h2>
+    </div>
+
+    <div class="container grid-3">
+      <% @orders.each do |order| %>
+        <div class="order">
+          <p>Order Total: <%= number_to_currency(order.total) %></p>
+          <p>Order Date: <%= order.created_at.strftime('%d %b %Y') %></p>
+          <p>Customer: <%= order.basket.user.email %></p>
+        </div>
+      <% end %>
     </div>
   <% else %>
 

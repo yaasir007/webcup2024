@@ -14,7 +14,11 @@
             <p class="product-description"><%= @product.description %></p>
             <h2 class="product-price">Price: <%= number_to_currency(@product.price) %></h2>
             <a href="<%= products_path %>" class="btn btn-secondary">Back to Products</a>
-            <a href="<%= products_path %>" class="btn btn-primary">Add to Basket</a>
+            <%= simple_form_for @basket_item do |f| %>
+              <%= f.hidden_field :product_id, value: @product.id %>
+              <%= f.input :quantity %>
+              <%= f.submit "Add to Basket", class: "btn btn-secondary" %>
+            <% end %>
         </div>
     </div>
 </section>

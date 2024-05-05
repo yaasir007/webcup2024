@@ -22,6 +22,6 @@ Rails.application.routes.draw do
   get 'dashboard/my_orders', to: 'dashboard#my_orders', as: 'my_orders'
   get 'dashboard/my_products', to: 'dashboard#my_products', as: 'my_products'
   get 'dashboard/my_tables', to: 'dashboard#my_tables', as: 'my_tables'
-  get 'dashboard/my_delivery_route', to: 'dashboard#my_delivery_route', as: 'my_delivery_route'
+  get 'dashboard/orders/:id/my_delivery_route', to: 'dashboard#my_delivery_route', as: 'my_delivery_route'
 
 end
