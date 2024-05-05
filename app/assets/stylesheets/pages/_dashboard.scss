@@ -29,6 +29,7 @@
     font-size: 18px;
     margin-bottom: 10px;
     line-height: 1;
+    color: var(--brown);
   }
 
   .content_h {
@@ -99,3 +100,16 @@
   }
 }
 
+.card-order {
+  background-color: var(--green);
+  border-radius: 10px;
+  padding: 30px;
+  color: white;
+}
+
+.card-order-delivered {
+  background-color: #1E6788;
+  border-radius: 10px;
+  padding: 30px;
+  color: white;
+}

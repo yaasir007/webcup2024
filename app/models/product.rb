@@ -4,8 +4,7 @@ class Product < ApplicationRecord
 
   validates :detailed_description, presence: true
   validates :ingredients, presence: true
-  
+
   has_many :basket_items
   has_many :baskets, through: :basket_items
-  has_one_attached :image
 end

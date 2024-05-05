@@ -35,6 +35,12 @@ body {
   vertical-align: bottom;
 }
 
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
