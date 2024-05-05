@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @products = @products.order(params[:sort_by]) if params[:sort_by].present?
   end
 
   def show

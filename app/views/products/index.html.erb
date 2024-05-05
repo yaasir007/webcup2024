@@ -3,6 +3,15 @@
     <h1>Dine with the Undead</h1>
 </section>
 
+<!-- Sorting Form -->
+<div class="sorting-container" style="text-align: center; margin-top: 20px;">
+    <%= form_with(url: products_path, method: :get, local: true) do |form| %>
+      <%= form.label :sort_by, "Sort by:", style: "color: white;" %>
+      <%= form.select :sort_by, options_for_select([['Price (Low to High)', 'price asc'], ['Price (High to Low)', 'price desc'], ['Name (A-Z)', 'title asc'], ['Name (Z-A)', 'title desc']]), include_blank: true %>
+      <%= form.submit "Sort", class: "btn btn-info" %>
+    <% end %>
+</div>
+
 <!-- Product Cards Section -->
 <div class="products-container mt-4">
     <div class="products-cards">
