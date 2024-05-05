@@ -1,0 +1,26 @@
+@keyframes eerieEffect {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05) rotate(3deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+}
+
+.image-eerie {
+  display: inline-block;
+  overflow: hidden;
+  animation: eerieEffect 3s ease-in-out infinite;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-eerie:hover {
+  transform: scale(1.1) rotate(-3deg);
+  filter: brightness(80%);
+}
