@@ -12,7 +12,13 @@ class DashboardController < ApplicationController
   end
 
   def my_orders
-    @orders = Order.where(user: current_user)
+    if authorized?
+      @orders = Order.where(delivered: false)
+      @past_orders = Order.where(delivered: true)
+    else
+      @orders = current_user.orders.order(created_at: :desc)
+      @past_orders = []
+    end
   end
 
   def my_tables
@@ -23,5 +29,16 @@ class DashboardController < ApplicationController
   def my_products
     @products = Product.all
     @product = Product.new
+  end
+
+  def my_delivery_route
+    @orders = Order.where(delivered: false)
+    @coordinates = []
+    @orders.each do |order|
+      @coordinates << [
+        order.latitude,
+        order.longitude
+      ]
+    end
   end
 end

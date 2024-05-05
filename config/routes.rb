@@ -14,11 +14,14 @@ Rails.application.routes.draw do
   resources :tables, only: [:index]
   resources :reservations, only: [:create, :destroy]
   resources :orders, only: [:show, :create, :index]
+  get 'orders/:id/mark_as_delivered', to: 'orders#mark_as_delivered', as: 'mark_as_delivered'
+
   resources :basket_items, only: [:create, :destroy]
 
   get 'dashboard/my_reservations', to: 'dashboard#my_reservations', as: 'my_reservations'
   get 'dashboard/my_orders', to: 'dashboard#my_orders', as: 'my_orders'
   get 'dashboard/my_products', to: 'dashboard#my_products', as: 'my_products'
   get 'dashboard/my_tables', to: 'dashboard#my_tables', as: 'my_tables'
+  get 'dashboard/my_delivery_route', to: 'dashboard#my_delivery_route', as: 'my_delivery_route'
 
 end

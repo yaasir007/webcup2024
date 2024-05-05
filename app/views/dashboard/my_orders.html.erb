@@ -1,3 +1,13 @@
 <%= render 'layouts/top_dashboard', page_title: 'My Orders' %>
+  <% if current_user.admin? %>
+    <div class="container center-items">
+      <h2>Undelivered Orders</h2>
+    </div>
 
+    <div class="container">
+      <h2>Delivered</h2>
+    </div>
+  <% else %>
+
+  <% end %>
 <%= render 'layouts/btm_dashboard' %>

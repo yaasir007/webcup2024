@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
   def create
     @order = Order.new(params_order)
     @order.basket = @basket
@@ -8,6 +7,12 @@ class OrdersController < ApplicationController
     @basket = Basket.create
     session[:basket_id] = @basket.id
     redirect_to root_path, notice: 'Your delivery is on its way! 🚚'
+  end
+
+  def mark_as_delivered
+    @order = Order.find(params[:id])
+    @order.mark_as_delivered!
+    redirect_to dashboard_my_orders_path, notice: 'Order delivered! 🎉'
   end
 
   private
