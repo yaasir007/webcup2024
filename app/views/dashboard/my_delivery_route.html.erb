@@ -5,8 +5,8 @@
       data-delivery-route-marker-value="<%= @coordinates.to_json %>"
       data-delivery-route-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   </div>
-  <div class="center-items mt-3">
+  <div class="center-items mt-3 gap-5">
     <%= link_to 'Back to Orders', my_orders_path, class: "btn btn-warning" %>
-    <%= link_to 'Mark as Delivered', mark_as_delivered_path(@order), class: "btn btn-primary" %>
+    <%= link_to 'Mark as Delivered', mark_as_delivered_path(@order), class: "btn" %>
   </div>
 <%= render 'layouts/btm_dashboard' %>

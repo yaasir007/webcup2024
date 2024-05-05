@@ -16,8 +16,8 @@ class DashboardController < ApplicationController
       @orders = Order.where(delivered: false)
       @past_orders = Order.where(delivered: true)
     else
-      @orders = current_user.orders.order(created_at: :desc)
-      @past_orders = []
+      @orders = Order.joins(:basket).where(baskets: { user_id: current_user.id }, delivered: false)
+      @past_orders = Order.joins(:basket).where(baskets: { user_id: current_user.id }, delivered: true)
     end
   end
 

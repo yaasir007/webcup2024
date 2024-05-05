@@ -3,15 +3,24 @@
     <div class="container center-items">
       <h2>Undelivered Orders</h2>
     </div>
-    <div class="container">
-      <% @past_orders.each do |order| %>
-        <div class="order">
-          <p>Order Total: <%= number_to_currency(order.total) %></p>
-          <p>Order Date: <%= order.created_at.strftime('%d %b %Y') %></p>
-          <div class="center-items">
-            <%= link_to 'OPTIMIZE ROUTE', my_delivery_route_path(order), class: "btn btn-primary" %>
+    <div class="container grid-3">
+      <% if @orders.empty? %>
+        <p style="color:#B55915;">No Orders Yet</p>
+      <% else %>
+
+        <% @orders.each do |order| %>
+          <div class="card-order">
+            <div class="d-flex justify-content-between">
+              <p><%= number_to_currency(order.total) %></p>
+              <p><%= order.created_at.strftime('%d %b %Y') %></p>
+            </div>
+            <p>Customer: <%= order.basket.user.email %></p>
+
+            <div class="center-items">
+              <%= link_to 'OPTIMIZE ROUTE', my_delivery_route_path(order), class: "btn btn-primary" %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
 
@@ -20,15 +29,51 @@
     </div>
 
     <div class="container grid-3">
-      <% @orders.each do |order| %>
-        <div class="order">
-          <p>Order Total: <%= number_to_currency(order.total) %></p>
-          <p>Order Date: <%= order.created_at.strftime('%d %b %Y') %></p>
+      <% @past_orders.each do |order| %>
+        <div class="card-order-delivered">
+          <div class="d-flex justify-content-between">
+            <p style='color:#8DBF10;'><%= number_to_currency(order.total) %></p>
+            <p><%= order.created_at.strftime('%d %b %Y') %></p>
+          </div>
           <p>Customer: <%= order.basket.user.email %></p>
         </div>
       <% end %>
     </div>
   <% else %>
+    <div class="container center-items">
+      <h2>Incoming!!</h2>
+    </div>
+    <div class="container">
+      <% if @orders.empty? %>
+        <p style="color:#B55915;">No Orders On The Way</p>
+      <% else %>
+        <% @orders.each do |order| %>
+          <div class="order">
+            <p>Order Total: <%= number_to_currency(order.total) %></p>
+            <p>Order Date: <%= order.created_at.strftime('%d %b %Y') %></p>
+            <div class="center-items">
+              <%= link_to 'OPTIMIZE ROUTE', my_delivery_route_path(order), class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="container center-items">
+      <h2>Recieved</h2>
+    </div>
+
+    <div class="container grid-3">
+      <% @past_orders.each do |order| %>
+        <div class="card-order-delivered">
+          <div class="d-flex justify-content-between">
+            <p style='color:#8DBF10;'><%= number_to_currency(order.total) %></p>
+            <p><%= order.created_at.strftime('%d %b %Y') %></p>
+          </div>
+          <p>Customer: <%= order.basket.user.email %></p>
+        </div>
+      <% end %>
+    </div>
 
   <% end %>
 <%= render 'layouts/btm_dashboard' %>

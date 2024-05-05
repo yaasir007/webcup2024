@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   def mark_as_delivered
     @order = Order.find(params[:id])
     @order.mark_as_delivered!
-    redirect_to dashboard_my_orders_path, notice: 'Order delivered! 🎉'
+    redirect_to my_orders_path, notice: 'Order delivered! 🎉'
   end
 
   private
