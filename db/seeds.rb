@@ -120,19 +120,6 @@ Product.create!(
   supernatural_effects: 'Drinking this might make you see the world in shades of red for a short while. Beware of sudden vampire cravings!'
 )
 
-Product.create!(
-  title: "Witch's Brew",
-  description: 'A mix of dark human nut spirits, served smoking with dry ice for that otherworldly effect',
-  price: 10,
-  category: 'Cryptic Concoctions',
-  image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870147/Monster%20Munchies/Menu/witch_s_brew_batcheditor_fotor_b6wm5z.webp',
-  detailed_description: 'Stirred in cauldrons by night, this smoky concoction brings the darkest spirits to your table.',
-  ingredients: 'Dark rum, human nut spirits, dry ice.',
-  nutritional_info: 'About 200 cal. Spirits included!',
-  chef_note: 'Enjoy with a side of screams.',
-  supernatural_effects: 'Each sip brings visions of ancient, foggy moors where spirits roam free.'
-)
-
 # Seeds for Monstrous Mains
 Product.create!(
   title: 'Arm & Hammer Steak',
@@ -160,44 +147,6 @@ Product.create!(
   supernatural_effects: 'Consuming this sandwich is rumored to induce deep, prophetic dreams of cryptic messages.'
 )
 
-Product.create!(
-  title: 'Skeleton Skewers',
-  description: 'Marinated pieces of meat grilled to perfection on bone-shaped skewers',
-  price: 25,
-  category: 'Monstrous Mains',
-  image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870141/Monster%20Munchies/Menu/skeleton_skewers_batcheditor_fotor_ov6gvk.webp',
-  detailed_description: 'Grilled on bone-shaped skewers, these marinated meats offer a bone-rattling experience.',
-  ingredients: 'Boneless meats, infernal marinade.',
-  nutritional_info: 'Approx. 300 cal per skewer.',
-  chef_note: 'Bone-appétit! A must-try with our graveyard dip.',
-  supernatural_effects: 'These bone-rattling skewers have the power to make your bones dance, literally. Get ready to shake a leg!'
-)
-
-Product.create!(
-  title: "Pharaoh’s Fingers Falafel",
-  description: "Crispy and golden, shaped in homage to the pharaohs’",
-  price: 30,
-  category: 'Monstrous Mains',
-  image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870136/Monster%20Munchies/Menu/pharaoh_s_fingers_falafel_batcheditor_fotor_mhadoe.webp',
-  detailed_description: 'Mummified in spices, these crispy falafels are a tribute to the pharaohs’ eternal cravings.',
-  ingredients: "Chickpeas, sesame seeds, mummy's spices.",
-  nutritional_info: 'About 250 cal. Rich in fiber and mystery.',
-  chef_note: 'Unwrap these with an ancient beer.',
-  supernatural_effects: 'Enjoy these to wake your inner pharaoh spirit; you might just start speaking ancient languages.'
-)
-
-Product.create!(
-  title: 'Sarcophagus Stew',
-  description: "A hearty blend featuring 'mummified' meat preserved in our chef's secret spices.",
-  price: 20,
-  category: 'Monstrous Mains',
-  image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870615/Monster%20Munchies/Menu/sarcophagus_stew_batcheditor_fotor_wmvatu.webp',
-  detailed_description: 'A blend of preserved meats stewed in secret spices, this dish has been a favorite since the time of the pharaohs.',
-  ingredients: 'Mummified meats, tombstone potatoes, sarcophagus spices.',
-  nutritional_info: 'High in protein, about 600 cal.',
-  chef_note: 'Immerse yourself in history with every spoonful.',
-  supernatural_effects: 'After this hearty stew, you might feel the need to wrap yourself up and take a long, mummy-like nap.'
-)
 
 Product.create!(
   title: 'Curse of the Curry',
@@ -210,20 +159,6 @@ Product.create!(
   nutritional_info: 'Hot with 700 cal.',
   chef_note: 'Curse your hunger away with this fiery delight.',
   supernatural_effects: 'This curry packs a punch strong enough to lift curses or perhaps inflict new ones on your taste buds.'
-)
-
-# Seeds for Zombie Zest
-Product.create!(
-  title: 'Brain Boost Hot Sauce',
-  description: 'Perfect for pouring over your favorite cerebrum.',
-  price: 15,
-  category: 'Zombie Zest',
-  image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870126/Monster%20Munchies/Menu/brain_boost_hot_sauce_batcheditor_fotor_esjgcs.webp',
-  detailed_description: 'A fiery sauce that will jolt your undead senses back to life with every drop.',
-  ingredients: 'Capsicum extract, undead nightshade, zombie brain juice.',
-  nutritional_info: 'Zero calories, but full of fiery spirit.',
-  chef_note: 'Drizzle over brain matter for a shock of flavor.',
-  supernatural_effects: 'Increases your brain power, or at least your belief in it.'
 )
 
 Product.create!(
@@ -240,7 +175,7 @@ Product.create!(
 )
 
 Product.create!(
-  title: 'Pulsating Heart Poppers',
+  title: 'Heart Poppers',
   description: 'Hearts that beat with flavor, bursting in your mouth.',
   price: 25,
   category: 'Zombie Zest',
@@ -279,18 +214,6 @@ Product.create!(
   supernatural_effects: 'Enhances your night vision for an hour post-consumption.'
 )
 
-Product.create!(
-  title: "Crypt Crumble",
-  description: 'A decadent apple and blackberry crumble, buried under a layer of crumbly topping.',
-  price: 15,
-  category: 'Dreadful Delicacies',
-  image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870127/Monster%20Munchies/Menu/crypt_keeper_s_crumble_batcheditor_fotor_zvmfrz.webp',
-  detailed_description: 'Each spoonful digs up flavors from the deep, dark beyond.',
-  ingredients: 'Apples, blackberries, haunting crumble topping.',
-  nutritional_info: 'Approx. 350 cal per serving.',
-  chef_note: 'Perfect with a scoop of Ghostly Gelato.',
-  supernatural_effects: 'May resurrect your appetite from the dead.'
-)
 
 Product.create!(
   title: 'Moldy Cheese Platter',
@@ -330,19 +253,6 @@ Product.create!(
   nutritional_info: 'Zero calories but revitalizing energy.',
   chef_note: 'Drink quickly after opening to capture the full effect.',
   supernatural_effects: 'Temporarily enhances undead agility and mental clarity.'
-)
-
-Product.create!(
-  title: "Vampire's Vengeance",
-  description: 'A rich, red wine cocktail with a splash of blood, garnished with a \'plasma\'-soaked cherry.',
-  price: 12,
-  category: 'Ghastly Goodies',
-  image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870142/Monster%20Munchies/Menu/vampire_s_vengeance_batcheditor_fotor_fnzhdb.webp',
-  detailed_description: 'This cocktail mixes the rich essence of nightshade berries with a hint of Transylvanian terror.',
-  ingredients: 'Red wine, nightshade berries, synthetic blood, cherry soaked in plasma.',
-  nutritional_info: 'Approximately 120 calories per glass.',
-  chef_note: 'Best enjoyed at midnight for a truly vampiric vibe.',
-  supernatural_effects: 'May cause a thirst for more.'
 )
 
 Product.create!(

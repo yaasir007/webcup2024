@@ -4,6 +4,8 @@
   <%= f.input :price %>
   <%= f.input :description %>
   <%= f.input :category %>
+  <%= f.input :detailed_description %>
   <%= f.input :image_url, as: :string, input_html: { value: @product.image_url }, label: 'Image URL' %>
   <%= f.button :submit, 'Create Product', class: 'btn btn-primary btn-lg btn-block' %>
+  <%= link_to 'Cancel', products_path, class: 'btn btn-secondary btn-lg btn-block' %>
 <% end %>

@@ -1,5 +1,5 @@
 <div class="product-card">
-    <%= image_tag(product.image_url, alt: product.title, class: "product-image") %>
+    <%= image_tag(product.image_url.present? ? product.image_url : 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714825954/Monster-Munchies-logo_gjeqpt.webp') %>
     <div class="product-card-info">
         <h2><%= product.title %></h2>
         <p><%= product.description %></p>
