@@ -145,61 +145,107 @@
 
 .product-detail-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  flex-direction: row; /* Align items side by side */
+  align-items: flex-start; /* Align items at the start of the cross axis */
+  background: var(--purple);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 80%;
-  max-width: 800px;
+  width: 100%; /* Take full width to accommodate both child elements */
+  max-width: 1200px; /* Set a max-width for better control on large screens */
 }
 
 .product-image-container {
-  width: 100%;
+  width: 40%; /* Control the size of the image container */
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px; /* Apply border-radius to the image container */
 }
 
 .product-image {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid #ccc;
 }
 
 .product-info {
-  text-align: center;
+  flex: 2;
   padding: 20px;
+  text-align: left;
+  color: var(--yellow);
+}
+
+.product-info h3 {
+  color: var(--green);
+  font-family: 'Creepster', cursive;
+  position: relative;
+}
+
+.product-info h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-title, .product-price, .product-description {
+  margin-bottom: 10px;
 }
 
 .product-title {
   font-size: 2.5em;
   color: #333;
-  margin-bottom: 10px;
 }
 
-.product-description {
+.product-description, .product-details {
   font-size: 1.2em;
-  margin-bottom: 20px;
 }
 
 .product-price {
   font-size: 1.5em;
   color: #28a745; /* A green color to emphasize the price */
-  margin-bottom: 20px;
 }
 
 .btn {
   padding: 10px 20px;
   color: #fff;
   background-color: #007bff;
-  border-color: #007bff;
+  border: none;
   border-radius: 5px;
   text-decoration: none;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: white;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 20px;
+}
+
+.quantity-input {
+  // margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .product-detail-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image-container, .product-info {
+    width: 100%;
+  }
+
+  .product-info {
+    text-align: center;
+  }
 }

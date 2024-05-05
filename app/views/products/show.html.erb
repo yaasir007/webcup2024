@@ -1,24 +1,34 @@
 <% @product = params[:id].present? ? Product.find(params[:id]) : Product.find(params[:basket_item][:product_id]) %>
+
 <section class="product-banner">
-    <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714840470/undead_having_fun_at_the_bar_kfkmtj.webp" alt="Dining with the Undead" class="product-banner-img">
-    <h1>Dine with the Undead</h1>
+    <img src="https://res.cloudinary.com/dqjdq06qv/image/upload/v1714840470/undead_having_fun_at_the_bar_kfkmtj.webp" alt="Undead dining in a restaurant" class="product-banner-img">
+    <h1 class="product-title">Dine with the Undead</h1>
 </section>
 
-<section class="product-detail-section">
-    <div class="product-detail-container">
-        <div class="product-image-container">
-            <img src="<%= @product.image_url %>" alt="<%= @product.title %>" class="product-image">
-        </div>
-        <div class="product-info">
-            <h1 class="product-title"><%= @product.title %></h1>
-            <p class="product-description"><%= @product.description %></p>
-            <h2 class="product-price">Price: <%= number_to_currency(@product.price) %></h2>
-            <a href="<%= products_path %>" class="btn btn-secondary">Back to Products</a>
+<div class="product-detail-container">
+    <div class="product-image-container">
+        <img src="<%= @product.image_url %>" alt="<%= @product.title %>" class="product-image">
+    </div>
+    <div class="product-info">
+        <h3>Detailed Description</h3>
+        <p><%= @product.detailed_description %></p>
+        <h3>Ingredients</h3>
+        <p><%= @product.ingredients %></p>
+        <h3>Nutritional Information</h3>
+        <p><%= @product.nutritional_info %></p>
+        <h3>Chef’s Note</h3>
+        <p><%= @product.chef_note %></p>
+        <h3>Supernatural Effects</h3>
+        <p><%= @product.supernatural_effects %></p>
+        <div class="actions">
+            <label class="price"><%= number_to_currency(@product.price) %></label>
+            <input type="number" value="1" min="1" class="quantity-input" style="margin: 10px;">
             <%= simple_form_for @basket_item do |f| %>
               <%= f.hidden_field :product_id, value: @product.id %>
               <%= f.input :quantity %>
               <%= f.submit "Add to Basket", class: "btn btn-secondary" %>
             <% end %>
         </div>
+        <a href="<%= products_path %>" class="btn btn-warning">Back to Menu</a>
     </div>
-</section>
+</div>

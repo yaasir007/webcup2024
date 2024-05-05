@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-      <%= cl_image_tag("https://res.cloudinary.com/dqjdq06qv/image/upload/v1714825954/Monster-Munchies-logo_gjeqpt.webp", alt: "Monster Munchies", width: 50, height: 50, crop: :fill) %>
+  <div class="container-fluid" style="padding-inline: 3.5rem;">
+    <a class="navbar-brand" href="/" style="transform: scale(1.5);">
+      <%= cl_image_tag("https://res.cloudinary.com/dqjdq06qv/image/upload/v1714877718/Monster%20Munchies/Logo/j5j7omufdpjorayq0lvo.webp", alt: "Monster Munchies", width: 50, height: 50, crop: :fill) %>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,10 +31,7 @@
       <% else %>
         <div class="navbar-nav ml-auto navbar-items-end">
           <li class="nav-item">
-            <%= link_to "Products", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Reservations", "#", class: "nav-link" %>
+            <%= link_to "Products", "/products", class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
