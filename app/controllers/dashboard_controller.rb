@@ -12,7 +12,13 @@ class DashboardController < ApplicationController
   end
 
   def my_orders
-    @orders = Order.where(user: current_user)
+    if authorized?
+      @orders = Order.where(delivered: false)
+      @past_orders = Order.where(delivered: true)
+    else
+      @orders = Order.joins(:basket).where(baskets: { user_id: current_user.id }, delivered: false)
+      @past_orders = Order.joins(:basket).where(baskets: { user_id: current_user.id }, delivered: true)
+    end
   end
 
   def my_tables
@@ -23,5 +29,13 @@ class DashboardController < ApplicationController
   def my_products
     @products = Product.all
     @product = Product.new
+  end
+
+  def my_delivery_route
+    @order = Order.find(params[:id])
+    @coordinates = [{
+        lat: @order.latitude,
+        lng: @order.longitude
+      }]
   end
 end
