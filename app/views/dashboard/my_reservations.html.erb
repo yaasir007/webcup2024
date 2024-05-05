@@ -3,26 +3,30 @@
   <h1>Reservations</h1>
 
   <div class="container">
-    <% @reservations.each do |reservation| %>
-      <div>
-        <p>Table: <%= reservation.table.name %></p>
-        <p>Seats: <%= reservation.seats %></p>
-        <p>Start time: <%= reservation.start_time %></p>
-      </div>
-    <% end %>
+    <div class="reservation-items" style="display:flex; gap: 1rem;">
+      <% @reservations.each do |reservation| %>
+        <div style="border: 1px solid purple; padding: 1rem;">
+          <p>Table: <%= reservation.table.name %></p>
+          <p>Seats: <%= reservation.seats %></p>
+          <p>Start time: <%= reservation.start_time %></p>
+        </div>
+      <% end %>
+    </div>
   </div>
 
 
   <% unless @past_reservations.empty? %>
     <div class="container">
       <h1>Past Reservations</h1>
-      <% @past_reservations.each do |reservation| %>
-        <div>
+      <div class="reservation-items" style="display:flex; gap: 1rem;">
+        <% @past_reservations.each do |reservation| %>
+        <div style="border: 1px solid purple; padding: 1rem; border-radius: 5px;">
           <p>Table: <%= reservation.table.name %></p>
           <p>Seats: <%= reservation.seats %></p>
           <p>Start time: <%= reservation.start_time %></p>
         </div>
       <% end %>
+      </div>
     </div>
   <% end %>
 <%= render 'layouts/btm_dashboard' %>
