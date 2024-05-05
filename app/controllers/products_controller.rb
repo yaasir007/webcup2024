@@ -16,18 +16,20 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params_product)
+    @product = Product.new(product_params)
     if @product.save
-      redirect_to my_products_path, notice: "Product saved successfully"
+      redirect_to product_path(@product), notice: "Product saved successfully"
     else
-      render :new, notice: "Something went wrong, try again!", status: :unprocessable_entity
+      flash.now[:alert] = "Failed to save product: " + @product.errors.full_messages.to_sentence
+      render :new, status: :unprocessable_entity
     end
   end
+
 
   def edit; end
 
   def update
-    if @product.update(params_product)
+    if @product.update(product_params)
       redirect_to root_path, notice: "Product updated successfully"
     else
       render :edit, notice: "Something went wrong, try again!", status: :unprocessable_entity
@@ -35,7 +37,8 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-
+    @product.delete
+    redirect_to my_products_path, notice: 'Product was successfully deleted.'
   end
 
   private
