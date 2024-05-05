@@ -1,0 +1,64 @@
+/* CSS */
+.buttonHome {
+  background-color: var(--bloodRed);
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 400;
+  justify-content: center;
+  padding: .6rem .56rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 260px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-4deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all .2s linear;
+  color: var(--bgColorWhite);
+}
+
+.buttonHome:nth-child(2) {
+  transform: rotate(8deg);
+  background-color: var(--secondary);
+}
+
+.buttonHome:nth-child(1):hover {
+  transform: rotate(0deg);
+}
+
+.buttonHome:nth-child(2):hover {
+  transform: rotate(0deg);
+}
+
+.buttonHome:focus {
+  outline: 0;
+}
+
+.buttonHome:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.buttonHome:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .buttonHome {
+    font-size: 1.25rem;
+  }
+}

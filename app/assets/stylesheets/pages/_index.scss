@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--bgColorBlack);
+  background-color: #153335;
   overflow-x: hidden;
 }
 
@@ -33,6 +33,12 @@ body {
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: bottom;
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes fadeIn {
@@ -47,3 +53,4 @@ body {
 
 @import "home";
 @import "dashboard";
+@import "products";
