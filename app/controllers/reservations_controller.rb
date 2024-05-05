@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
     if @reservation.save
-      redirect_to tables_path, notice: 'Reservation was successfully created.'
+      redirect_to my_reservations_path, notice: 'Reservation was successfully created.'
     else
       @tables = Table.all
       render 'tables/index', status: :unprocessable_entity, notice: "Reservation was not unsuccessfull. But it's not the end of the world... kind of."

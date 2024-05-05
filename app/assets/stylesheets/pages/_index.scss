@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: var(--purple);
+  background-color: #153335;
   overflow-x: hidden;
 }
 
@@ -53,3 +53,4 @@ body {
 
 @import "home";
 @import "dashboard";
+@import "products";
