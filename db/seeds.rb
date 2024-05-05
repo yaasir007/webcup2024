@@ -31,6 +31,12 @@ Table.create!(name: 'Ghoulish Grub')
 Table.create!(name: 'Spooky Snack')
 Table.create!(name: 'Creepy Table')
 Table.create!(name: 'Eerie Eats')
+Table.create!(name: 'Monstrous Coin')
+Table.create!(name: 'Cryptic Cuisine')
+Table.create!(name: 'Zombie Zone')
+Table.create!(name: 'Dreadful Dining')
+Table.create!(name: 'Ghastly Gourmet')
+Table.create!(name: 'Supernatural Supper')
 
 # # Seeds for Eerie Entrees
 # Product.create!(title: 'Finger Foods', description: 'Literally. Try our assortment of crispy human fingers', price: 10, category: 'Eerie Entrees', image_url: 'https://res.cloudinary.com/dqjdq06qv/image/upload/v1714870130/Monster%20Munchies/Menu/finger_foods_batcheditor_fotor_cipbxe.webp')

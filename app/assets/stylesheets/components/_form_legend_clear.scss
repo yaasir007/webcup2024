@@ -8,3 +8,10 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.form-bookings {
+  margin-top: 10%;
+  background-color: var(--purple) !important;
+  color: var(--yellow);
+  border: none !important;
+}
