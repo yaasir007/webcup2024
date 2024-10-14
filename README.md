@@ -17,4 +17,4 @@ Our project is built using the following technologies:
 
 Reel - https://www.facebook.com/watch/?v=1140187697319062
 
-<img scr="https://i0.wp.com/www.maurice-info.mu/wp-content/uploads/2024/05/2.5-2e-gagnant-site-web.jpg?w=751&ssl=1" />
+<img src="https://i0.wp.com/www.maurice-info.mu/wp-content/uploads/2024/05/2.5-2e-gagnant-site-web.jpg?w=751&ssl=1" />
