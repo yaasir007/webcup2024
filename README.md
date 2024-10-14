@@ -13,3 +13,8 @@ Our project is built using the following technologies:
 6. Stimulus Rails for JavaScript <br>
 7. Devise for login <br>
 8. Sqlite3 for Database <br>
+
+
+Reel - https://www.facebook.com/watch/?v=1140187697319062
+
+<img scr="https://i0.wp.com/www.maurice-info.mu/wp-content/uploads/2024/05/2.5-2e-gagnant-site-web.jpg?w=751&ssl=1" />
